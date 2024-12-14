@@ -1,28 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Page</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>Wishlist</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        h3 {
-            font-size: x-large;
-            margin-top: 20px;
-            text-align: center;
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
         }
-        section{
-            padding-top: 20px;
-            padding-left: 20px;
-            padding-right: 20px;
-            padding-bottom: 20px;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .wishlist {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .wishlist-item {
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 15px;
+        }
+        .wishlist-item img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        .wishlist-item h3 {
+            margin: 10px 0;
+        }
+        .wishlist-item p {
+            margin: 10px 0;
+            color: #555;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #5e56b48f;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .btn:hover {
+            background-color: #5e56b48f;
         }
     </style>
 </head>
-
 <body>
     <section id="header">
         <h2><a href="index.html">SP SHOPPERS</a></h2>
@@ -31,28 +71,32 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="login.html">Login</a></li>
-                <li><a href="cart.html"><i class='bx bx-cart cart'></i></a></li>
+                <li><a href="cart.html"><i class='cart'></i></a></li>
             </ul>
         </div>
     </section>
     <div class="container">
-        <section>
-            <h2>Our Mission</h2>
-            <p>At SP Shoppers, we are committed to providing high-quality products and exceptional service to
-                our customers. Our mission is to make online shopping seamless, enjoyable, and accessible for everyone.
-            </p>
-        </section>
-        <section>
-            <h2>Our Story</h2>
-            <p>Founded in 2024, SP Shoppers began as a small team with a big vision. Over the years, we have
-                grown into a trusted brand, serving customers across the globe. Our journey has been driven by
-                innovation, passion, and a deep understanding of our customers' needs.</p>
-        </section>
-        <section>
-            <h2>What We Offer</h2>
-            <p>We specialize in a wide range of products, including electronics, fashion, home essentials, and much
-                more. Our platform is designed to ensure a smooth and secure shopping experience for every customer.</p>
-        </section>
+        <h1>My Wishlist</h1>
+        <div class="wishlist">
+            <div class="wishlist-item">
+                <img src="tshirt-product.jpg" alt="Product Image">
+                <h3>Product 1</h3>
+                <p>CAD 20</p>
+                <a href="cart.html" class="btn">Add to Cart</a>
+            </div>
+            <div class="wishlist-item">
+                <img src="tshirt-product.jpg" alt="Product Image">
+                <h3>Product 2</h3>
+                <p>CAD 20</p>
+                <a href="cart.html" class="btn">Add to Cart</a>
+            </div>
+            <div class="wishlist-item">
+                <img src="tshirt-product.jpg" alt="Product Image">
+                <h3>Product 3</h3>
+                <p>CAD 20</p>
+                <a href="cart.html" class="btn">Add to Cart</a>
+            </div>
+        </div>
     </div>
     <section id="newsletter" class="section-p1 section-m1">
         <div class="newstext">
@@ -114,3 +158,4 @@
         </div>
     </footer>
 </body>
+</html>

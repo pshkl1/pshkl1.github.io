@@ -3,22 +3,65 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Page</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <title>Shopping Cart</title>
     <link rel="stylesheet" href="style.css">
     <style>
         h3 {
             font-size: x-large;
-            margin-top: 20px;
-            text-align: center;
-        }
-        section{
             padding-top: 20px;
             padding-left: 20px;
-            padding-right: 20px;
             padding-bottom: 20px;
+            color: #9e96f4;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ddd;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        .total {
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: right;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            background-color: #5cb85c;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #4cae4c;
+        }
+
+        .btn-remove {
+            background-color: #d9534f;
+        }
+
+        .btn-remove:hover {
+            background-color: #c9302c;
         }
     </style>
 </head>
@@ -31,28 +74,40 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="login.html">Login</a></li>
-                <li><a href="cart.html"><i class='bx bx-cart cart'></i></a></li>
+                <li><a href="cart.html"><i class='cart'></i></a></li>
             </ul>
         </div>
     </section>
     <div class="container">
-        <section>
-            <h2>Our Mission</h2>
-            <p>At SP Shoppers, we are committed to providing high-quality products and exceptional service to
-                our customers. Our mission is to make online shopping seamless, enjoyable, and accessible for everyone.
-            </p>
-        </section>
-        <section>
-            <h2>Our Story</h2>
-            <p>Founded in 2024, SP Shoppers began as a small team with a big vision. Over the years, we have
-                grown into a trusted brand, serving customers across the globe. Our journey has been driven by
-                innovation, passion, and a deep understanding of our customers' needs.</p>
-        </section>
-        <section>
-            <h2>What We Offer</h2>
-            <p>We specialize in a wide range of products, including electronics, fashion, home essentials, and much
-                more. Our platform is designed to ensure a smooth and secure shopping experience for every customer.</p>
-        </section>
+        <h3>Your Shopping Cart</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Product Name</td>
+                    <td>20 CAD</td>
+                    <td>
+                        <input type="number" value="1" min="1" style="width: 50px; text-align: center;">
+                    </td>
+                    <td>$20.00</td>
+                    <td>
+                        <button class="btn btn-remove">Remove</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="padding-right: 20px;" class="total">Grand Total: $10.00</div>
+        <div style="text-align: right;padding-right: 20px;">
+            <button class="btn"><a href="checkout.html">Proceed to Checkout</a></button>
+        </div>
     </div>
     <section id="newsletter" class="section-p1 section-m1">
         <div class="newstext">
@@ -114,3 +169,5 @@
         </div>
     </footer>
 </body>
+
+</html>
